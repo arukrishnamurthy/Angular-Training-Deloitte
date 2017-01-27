@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="\Angularjs\Scripts\angular.js"></script>
+<body>
+
+<div ng-app="myApp" ng-init="names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+    <p>The name is {{ lastName | uppercase }}</p>
+    <p>The name is {{ lastName | lowercase }}</p>
+<br>
+Full Name: {{firstName + " " + lastName}}
+    <ul>
+        <li ng-repeat="x in names">
+            {{ x.name + ', ' + x.country }}
+        </li>
+    </ul>
+</div>
+
+<script src="\Angularjs\Scripts\myApp.js"></script>
+<script src="\Angularjs\Scripts\myCtrl.js"></script>
+
+</body>
+</html>

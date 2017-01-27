@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="\Angularjs\Scripts\angular.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+<p w3-test-directive></p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "David";
+    $scope.lastName= "Stocks";
+});
+
+app.directive("w3TestDirective", function() {
+    return {
+        template : "Directive constructor!"
+    };
+});
+
+</script>
+
+</body>
+</html>

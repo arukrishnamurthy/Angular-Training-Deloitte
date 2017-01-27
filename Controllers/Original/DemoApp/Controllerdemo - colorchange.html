@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="\Angularjs\Scripts\angular.js"></script>
+<body>
+
+<div ng-app="myApp" ng-init="myCol='lightblue'" ng-controller="myCtrl">
+
+First Name: <input style="background-color:{{myCol}}" value="{{myCol}}" type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "David";
+    $scope.lastName= "Stocks";
+});
+</script>
+
+</body>
+</html>

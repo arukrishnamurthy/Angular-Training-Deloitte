@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<script src="\Angularjs\Scripts\angular.js"></script>
+<body>
+
+<div>
+
+    <ul ng-app="myApp" ng-controller="myCtrl">
+        <li ng-repeat="x in longnames">
+            {{x | myFormat}}
+        </li>
+    </ul>
+
+</div>
+
+<script src="\Angularjs\Scripts\myApp.js"></script>
+<script src="\Angularjs\Scripts\myCtrl.js"></script>
+
+
+</body>
+</html>
